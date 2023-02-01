@@ -6,14 +6,10 @@ import Content from "./Components/Content";
 
 const App = () => {
   return (
-    <>
-      <body>
-        <Header pic={img} />
-        <main>
-          <Content />
-        </main>
-      </body>
-    </>
+    <div>
+      <Header pic={img} />
+      <Content />
+    </div>
   );
 };
 
@@ -26,19 +22,19 @@ export default App;
 // const App = () => {
 //   return (
 //     <>
-//       <body>
+//
 //         <header>
 //           <img src={img} alt="" />
 //         </header>
 //         <main>
 //           <div>
-//             {data.map((element) => {
+//             {data.map((element,index) => {
 //               return (
-//                 <section>
+//                 <section key={index}>
 //                   <h2>{element.category}</h2>
 //                   <div>
-//                     {element.images.map((element) => {
-//                       return <img src={[element]} alt="" />;
+//                     {element.images.map((element,num) => {
+//                       return <img key={num} src={[element]} alt="" />;
 //                     })}
 //                   </div>
 //                 </section>
@@ -46,7 +42,7 @@ export default App;
 //             })}
 //           </div>
 //         </main>
-//       </body>
+//
 //     </>
 //   );
 // };

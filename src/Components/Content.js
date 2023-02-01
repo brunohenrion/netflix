@@ -5,15 +5,13 @@ import data from "../data.json";
 const Content = () => {
   return (
     <div>
-      {data.map((element) => {
+      {data.map((element, index) => {
         return (
-          <section>
-            {/* <h2>{element.category}</h2> */}
+          <section key={index}>
             <Title name={element.category} />
             <div>
-              {element.images.map((element) => {
-                // return <img src={[element]} alt="" />;
-                return <Picture pic={[element]} />;
+              {element.images.map((element, num) => {
+                return <Picture key={num} pic={[element]} />;
               })}
             </div>
           </section>
